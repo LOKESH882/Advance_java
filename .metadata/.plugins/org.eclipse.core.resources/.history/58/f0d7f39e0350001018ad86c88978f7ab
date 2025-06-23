@@ -1,0 +1,21 @@
+package com.tka.database_springdemo.dao;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.springframework.stereotype.Repository;
+
+import com.tka.database_springdemo.entity.Person;
+
+
+@Repository
+public class MainDao {
+
+	SessionFactory factory;
+	public void insertData(Person person) {
+		Session session = factory.openSession();
+		session.beginTransaction();
+		session.persist(person);
+		session.getTransaction().commit();
+		session.close();
+	}
+}

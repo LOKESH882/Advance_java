@@ -1,0 +1,13 @@
+package com.tka.database_springdemo.dao;
+
+import org.springframework.stereotype.Repository;
+
+import com.tka.database_springdemo.entity.Person;
+
+@Repository
+public class MainDao {
+
+	public void insertData(Person person) {
+		
+	}
+}

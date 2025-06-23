@@ -1,0 +1,14 @@
+package com.tks.lokesh_Springboot;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class LokeshSpringbootApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(LokeshSpringbootApplication.class, args);
+		System.out.println("My Application Started...");
+	}
+
+}

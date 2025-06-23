@@ -1,0 +1,14 @@
+package com.tks.lokesh_Springboot;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class OtherController {
+	
+	//localhost:8080/getAllInfo
+	@GetMapping("getAllInfo")
+	public void getAllRecord() {
+		System.out.println("You Are In Get All Record...");
+	}
+}

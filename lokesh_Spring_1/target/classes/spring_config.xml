@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+        
+        <beans>
+        <bean id="emp" class="lokesh_Spring_1.entity.Employee" scope="singleton">
+        	<property name="name" value = "rohan"></property>
+        	<property name="id" value = "2"></property> 
+        	<property name="nation" ref="country"></property>
+        	<!-- <constructor-arg index="0" value="lokesh"> </constructor-arg> -->
+        	
+        	<!-- <constructor-arg index="0" value ="1"> </constructor-arg>
+        	<constructor-arg index="1" value ="lokesh"> </constructor-arg> -->
+        
+        </bean>
+        <bean id="country" class="lokesh_Spring_1.entity.Nation">
+        <property name="id" value="1"></property>
+        <property name="name" value="India"></property>
+        
+        </bean>
+        
+        </beans>

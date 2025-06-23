@@ -1,0 +1,73 @@
+package com.tks.lokesh_Springboot;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tks.lokesh_Springboot.entity.Employee;
+
+@RestController
+public class OtherController {
+	
+	//localhost:8080/getAllInfo
+	@GetMapping("getAllInfo")
+	public void getAllRecord() {
+		System.out.println("You Are In Get All Record...");
+	}
+	
+	//localhost:8080/getAllInfo2
+		@GetMapping("getAllInfo2")
+	public String getAllRecord2() {
+		System.out.println("Data Send To Client");
+		return "You Are in Get All Method.";
+	}
+		
+		//localhost:8080/addRecord
+	@PostMapping(value = "addRecord")
+	public void AddRecord(@RequestBody Employee emp) {
+		System.out.println(emp);
+		System.out.println("Data Added...");
+	}
+	
+	//localhost:8080/addRecord2
+	@PostMapping(value = "addRecord2")
+	public String addrecord2(@RequestBody Employee emp) {
+		System.out.println(emp);
+		return "Data Added...";
+	}
+	
+	//localhost:8080/updateRecord/3
+	@PutMapping(value = "updateRecord/{id}")
+	public void updateRecord(@RequestBody Employee emp,@PathVariable int id) {
+		System.out.println("ID:- "+id);
+		System.out.println(emp);
+		System.out.println("Data Updated...");
+	}
+	
+	//localhost:8080/updateRecord2/3
+	@PutMapping(value = "updateRecord2/{id}")
+	public String updateRecord2(@RequestBody  Employee emp,@PathVariable int id) {
+		System.out.println("ID:- "+id);
+		System.out.println(emp);
+		return "Data Updated...";
+	}
+	
+	@DeleteMapping(value = "deleteRecord/{id}")
+	public void deleteRecord(@RequestBody Employee emp,@PathVariable int id) {
+		System.out.println("ID:- "+id);
+		System.out.println(emp);
+		System.out.println("Data Deleted...");
+	}
+	
+	@DeleteMapping(value = "deleteRecord2/{id}")
+	public String deleteRecord2(@RequestBody Employee emp,@PathVariable int id) {
+		System.out.println("ID:- "+id);
+		System.out.println(emp);
+		return "Data Deleted...";
+	}
+}

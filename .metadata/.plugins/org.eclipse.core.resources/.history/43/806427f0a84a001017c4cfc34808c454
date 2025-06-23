@@ -1,0 +1,8 @@
+package lokesh_Spring_5_AOC.configure;
+
+import org.springframework.context.annotation.ComponentScan;
+
+@ComponentScan
+public class Spring_Config {
+
+}

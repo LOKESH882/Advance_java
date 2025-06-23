@@ -1,0 +1,30 @@
+package lokesh_Spring_5_AOC.beans;
+
+import org.aspectj.lang.annotation.After;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.stereotype.Component;
+
+@Component
+@Aspect
+public class Message {
+	@Pointcut("execution (public void withdrawBalance())")
+	 public void withDrawMessageSent() {
+		 
+	 }
+	
+	@Before("withDrawMessageSent()")
+	public void withDrawSms() {
+		System.out.println("SMS send Before Withdraw...");
+	}
+	
+	@Pointcut("execution (public void deposite() )")
+	 public void depositeMessageSent() {
+		 
+	 }
+	@After("depositeMessageSent()")
+	public void depositeSms() {
+		System.out.println("SMS send After Deposite...");
+	}
+}

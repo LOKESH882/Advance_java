@@ -1,0 +1,32 @@
+package com.tks.lokesh_Springboot;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tks.lokesh_Springboot.entity.Employee;
+
+@RestController
+public class OtherController {
+	
+	//localhost:8080/getAllInfo
+	@GetMapping("getAllInfo")
+	public void getAllRecord() {
+		System.out.println("You Are In Get All Record...");
+	}
+	
+	//localhost:8080/getAllInfo2
+		@GetMapping("getAllInfo2")
+	public String getAllRecord2() {
+		System.out.println("Data Send To Client");
+		return "You Are in Get All Method.";
+	}
+		
+		//localhost:8080/addRecord
+	@PostMapping(value = "addRecord")
+	public void AddRecord(@RequestBody Employee emp) {
+		System.out.println(emp);
+		System.out.println("Data Added...");
+	}
+}

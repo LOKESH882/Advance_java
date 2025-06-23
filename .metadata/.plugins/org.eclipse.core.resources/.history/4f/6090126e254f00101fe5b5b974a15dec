@@ -1,0 +1,33 @@
+package com.tks.lokesh_Springboot.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.tks.lokesh_Springboot.entity.Employee;
+
+@RestController
+@RequestMapping(value = "employeeapi")
+public class ProductController {
+	//localhost:8080/employeeapi/employee
+	@GetMapping(value = "employee")
+	public void getEmpData() {
+		System.out.println("***** You Are IN Get All Record *****");
+	}
+	
+	//localhost:8080/employeeapi/employee2
+		@GetMapping(value = "employee2")
+		public String getEmpData2() {
+			System.out.println("***** You Are IN Get All Record *****");
+			return "***** You Are IN Get All Record *****";
+		}
+		
+		//localhost:8080/employeeapi/employee
+		@PostMapping(value = "employee")
+		public void addEmpData(@RequestBody Employee emp) {
+			System.out.println(emp);
+			System.out.println("Data Inserted...");
+		}
+}

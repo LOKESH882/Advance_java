@@ -1,0 +1,5 @@
+package com.tka.database_springdemo.entity;
+
+public class Person {
+
+}

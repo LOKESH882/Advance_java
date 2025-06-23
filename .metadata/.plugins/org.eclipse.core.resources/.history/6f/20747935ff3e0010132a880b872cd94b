@@ -1,0 +1,19 @@
+package com.JBK_Maven_1.Maven_JBK_1;
+
+/**
+ * Hello world!
+ *
+ */
+public class App 
+{
+    public static void main( String[] args )
+    {
+        System.out.println( "Hello World!" );
+        try {
+        	Class.forName("com.mysql.cj.jdbc.Driver");
+        	System.out.println("Class Loaded...");
+        }catch(ClassNotFoundException e) {
+        	System.out.println(e);
+        }
+    }
+}

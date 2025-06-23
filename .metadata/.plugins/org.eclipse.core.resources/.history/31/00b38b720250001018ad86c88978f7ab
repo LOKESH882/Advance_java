@@ -1,0 +1,15 @@
+package com.tka.database_springdemo.service;
+
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
+import com.tka.database_springdemo.entity.Person;
+
+@Service
+// @Component
+public class MainService {
+
+	public void insertData(Person person) {
+		
+	}
+}

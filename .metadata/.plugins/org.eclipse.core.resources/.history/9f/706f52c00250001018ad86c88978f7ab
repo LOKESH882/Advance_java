@@ -1,0 +1,5 @@
+package com.tka.database_springdemo.dao;
+
+public class MainDao {
+
+}

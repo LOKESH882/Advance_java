@@ -1,0 +1,46 @@
+package lokesh_hibernate_operations;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+import lokesh_hibernate_entity.Car;
+
+public class Operation_1 {
+	private static Configuration configuration = null;
+	private static SessionFactory factory = null;
+	private static Session session=null;
+	private static Transaction transaction=null;
+	public static void insertData_2() {
+		Configuration configuration = new Configuration();
+    	configuration.configure();
+    	configuration.addAnnotatedClass(Car.class);
+    	factory = configuration.buildSessionFactory();
+    	session=factory.openSession();
+    	transaction=session.beginTransaction();
+    	Car car = new Car("Nano","Petrol",50000,"Yellow");
+    	session.save(car);
+        // session.persist(car);
+         transaction.commit();
+         session.close();
+    	
+	}
+
+    public static void insertData() {
+        Session session = DoConfiguration.getSession();
+        Transaction transaction=session.beginTransaction();
+            // Car car = new Car("Nano","Petrol",50000,"Yellow");
+        	Car car = new Car();
+			  car.setColor("yellow"); 
+			  car.setFuel("petrol"); 
+			  car.setName("Nano");
+			  car.setPrice(50000);
+			 
+			session.save(car);
+           // session.persist(car);
+            transaction.commit();
+            DoConfiguration.closeSession();
+       
+    }
+}
