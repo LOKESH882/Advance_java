@@ -12,7 +12,7 @@ import com.tka.database_springdemo.service.MainService;
 @RestController
 @RequestMapping(value = "personAPI")
 public class MainController {
-
+	
 	@Autowired
 	MainService service;
 	
