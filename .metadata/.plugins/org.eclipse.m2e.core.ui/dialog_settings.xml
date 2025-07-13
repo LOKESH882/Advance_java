@@ -73,6 +73,8 @@
 	</section>
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\91853\eclipse-workspace\JBK_Maven\SpringMVCEx"/>
+			<item value="C:\Users\91853\eclipse-workspace\JBK_Maven\SAMSTRACK_API"/>
 			<item value="C:\Users\91853\eclipse-workspace\JBK_Maven\database_springdemo"/>
 			<item value="C:\Users\91853\eclipse-workspace\JBK_Maven\lokesh_Springboot"/>
 		</list>
